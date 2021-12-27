@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>832c033e-6584-49e0-8d33-d4462efcceb7</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Sitecore.Rocks.Shared.VisualStudio</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\FieldTypes\FieldTypeHandlerAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\FieldTypes\FieldTypeHandlerManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\FieldTypes\IFieldTypeHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\FieldTypes\StandardFieldTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\FileCodeModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\FileCodeModelCustomTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\1000 - ProcessClasses.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\2000 - ProcessInterfaces.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\7000 - GenerateCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\8000 - SaveTemplates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\ProcessCodeFirstTemplatesPipeline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\Templates\Template.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\Templates\TemplateField.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeFirstTemplates\Templates\TemplateSection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeGenerationFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeGenerationPane.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CodeGeneratorCustomTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CustomTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CustomToolRegistrationAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CustomTools\AspxGeneratorCustomTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CustomTools\CompiledCodeGeneratorCustomTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\CustomTools\XsltGeneratorCustomTool.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CodeGeneration\T4\TextTemplating.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentEditors\Commands\Fields\BrowseTypeName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentEditors\ContentEditorFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentEditors\ContentEditorPane.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentTrees\Commands\EditFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentTrees\Commands\LocateFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentTrees\Commands\OpenItemXml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentTrees\Commands\WebAdministration\AttachToProcess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentTrees\ContentTreePane.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentTrees\Pipelines\DeleteItem\020 - DeleteFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentTrees\Pipelines\DragCopy\030 - CopyFiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ContentTrees\Pipelines\DuplicateItem\030 - DuplicateFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Dialogs\BrowseTypeName\BrowseTypeNameDialog.xaml.cs">
+      <DependentUpon>BrowseTypeNameDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\Dialogs\BrowseTypeName\TypeNameSelector.xaml.cs">
+      <DependentUpon>TypeNameSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ProjectExtensions\ProjectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ProjectHostExtensions\ProjectHostExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ProjectItemExtensions\ProjectItemExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Media\MediaPane.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\Pipelines\Troubleshooter\DevelopmentServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Options\KeyboardSchemeOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Options\MacroOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Options\VisualStudioOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\AddToProject\AddToVisualStudioProject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Add.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\AddProject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\BindFileItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\CheckOut.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Commit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\DisconnectFileItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\EditItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\EditProject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\EditProjectFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Exclude.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\LocateFileInContentTree.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\ProjectsSubmenu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\RebindFileItems.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterFileBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterFiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterSublayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterViewLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterViewRendering.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterXslRendering.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Registering\RegisterXsltRendering.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\RemoveProject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\ResolveCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\ResolveUsingLocal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\ResolveUsingServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Revert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\SearchReferences.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\SolutionCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Commands\Update.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Dialogs\AddWindow.xaml.cs">
+      <DependentUpon>AddWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Dialogs\BindFileItemDialog.xaml.cs">
+      <DependentUpon>BindFileItemDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Dialogs\CheckOutDialog.xaml.cs">
+      <DependentUpon>CheckOutDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Dialogs\CommitWindow.xaml.cs">
+      <DependentUpon>CommitWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Dialogs\CreateItemWindow.xaml.cs">
+      <DependentUpon>CreateItemWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Dialogs\ExcludeWindow.xaml.cs">
+      <DependentUpon>ExcludeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Dialogs\ProjectLogWindow.xaml.cs">
+      <DependentUpon>ProjectLogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Dialogs\RevertWindow.xaml.cs">
+      <DependentUpon>RevertWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\ElementIterator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\FileItemDropManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\FileItemHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\FileItemHandlerAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\FileItemManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\Handlers\CshtmlFileItemHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\Handlers\LayoutFileItemHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\Handlers\SublayoutFileItemHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\Handlers\XsltFileItemHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\IFileItemHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\FileItems\PathBasedFileItemHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\Project.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\ProjectFileItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Projects\ProjectManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Schemas\SchemaManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\Dialogs\BrowseTypeName\BrowseTypeNameDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\Dialogs\BrowseTypeName\TypeNameSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Projects\Dialogs\AddWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Projects\Dialogs\BindFileItemDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Projects\Dialogs\CheckOutDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Projects\Dialogs\CommitWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Projects\Dialogs\CreateItemWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Projects\Dialogs\ExcludeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Projects\Dialogs\ProjectLogWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Projects\Dialogs\RevertWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Items.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\ContentEditorCommand.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\ContentEditorFieldCommand.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\ContentTreeCommand.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\DocumentWindow.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\FieldType.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\InfoPane.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\LoadItemPipeline.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\Management Tab.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\SaveItemPipeline.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\SetFieldVisibility.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\Skin.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\ToolWindow.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\TreeViewItem.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore Rocks\VirtualItem.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Code Generation\LanguageConstantsAspx.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Code Generation\LanguageConstantsCs.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Code Generation\LanguageConstantsXslt.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Code Generation\StronglyTypedItems.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Code Generation\TemplateClasses.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Engagement Analytics\Engagement Analytics Action with UI.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Engagement Analytics\Engagement Analytics Action.ZIP" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Items\Items.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Layouts\Layout without Code Behind.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Layouts\Layout.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\MVC\MvcControllerAction.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\MVC\MvcModel.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\MVC\MvcViewLayout.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\MVC\MvcViewRendering.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Packages\Package.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Pipelines\ContentEditorWarning.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Pipelines\HttpRequestProcessor.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Pipelines\LoaderProcessor.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Pipelines\PreprocessRequestProcessor.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Pipelines\PublishItem.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Pipelines\RenderFieldProcessor.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Pipelines\RenderLayoutProcessor.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Pipelines\SaveProcessor.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Renderings\Sublayout.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Renderings\xsl.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Rules\RuleAction.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Rules\RuleCondition.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Speak 1.2\Component.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Speak 1.2\ComponentJavaScript.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Speak\BaseComponent.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Speak\Component.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Speak\JQueryUIComponent.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Speak\PageCode.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\UI\Command.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\UI\GutterRenderer.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\UI\SubitemsSortingComparer.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\UI\Validator.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ItemTemplates\Sitecore\Workflows\WorkflowAction.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ProjectTemplates\Sitecore Rocks\Sitecore.Rocks.Plugin.zip" />
+    <None Include="$(MSBuildThisFileDirectory)ProjectTemplates\Sitecore Rocks\Sitecore.Rocks.Server.Plugin.zip" />
+  </ItemGroup>
+</Project>

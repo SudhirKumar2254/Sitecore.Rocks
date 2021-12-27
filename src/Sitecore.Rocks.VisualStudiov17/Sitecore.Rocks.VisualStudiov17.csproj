@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{8BDC95CC-5410-4A50-B3BF-F44ED0CA5A29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.Rocks</RootNamespace>
+    <AssemblyName>Sitecore.Rocks.VisualStudiov17</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <UseCodebase>true</UseCodebase>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
+    <StartAction>Program</StartAction>
+    <StartProgram Condition="'$(DevEnvDir)' != ''">$(DevEnvDir)devenv.exe</StartProgram>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.CommandBars, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\packages\Microsoft.VisualStudio.CommandBars.8.0.0.1\lib\net10\Microsoft.VisualStudio.CommandBars.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TaskDialog">
+      <HintPath>..\..\lib\TaskDialog.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.Rocks.Server.Abstractions\Sitecore.Rocks.Server.Abstractions.csproj">
+      <Project>{ac426fec-50f1-4250-b915-b22888a0eee5}</Project>
+      <Name>Sitecore.Rocks.Server.Abstractions</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.Rocks.Server\Sitecore.Rocks.Server.csproj">
+      <Project>{fb504e79-ad4f-4d68-88c8-0e1f668d7fc5}</Project>
+      <Name>Sitecore.Rocks.Server</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.Rocks.TemplateWizard\Sitecore.Rocks.TemplateWizard.csproj">
+      <Project>{C7509E56-744C-4EC6-A422-763A2BF39029}</Project>
+      <Name>Sitecore.Rocks.TemplateWizard</Name>
+      <IncludeOutputGroupsInVSIX>$(DefaultIncludeOutputGroupsInVSIX)</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.Rocks\Sitecore.Rocks.csproj">
+      <Project>{39d87fbf-43b7-4a35-8065-0fba544ad601}</Project>
+      <Name>Sitecore.Rocks</Name>
+      <IncludeOutputGroupsInVSIX>$(DefaultIncludeOutputGroupsInVSIX)</IncludeOutputGroupsInVSIX>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Themes\LeftMarginMultiplierConverter.cs" />
+    <Compile Include="Resources\Themes\TreeViewItemExtensions.cs" />
+    <Compile Include="Shell\Commands\About.cs" />
+    <Compile Include="Shell\Commands\ManagePlugins.cs" />
+    <Compile Include="Shell\Commands\Marketplace.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentEditors\ContentEditorCommand.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\CollapseAll.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\ContentTreeCommand.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\CopyItemXml.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\DisconnectSite.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\NewDerivedTemplate.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\PasteItemXml.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\PublishSubItems.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\RebuildPublishingDatabase.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\RebuildSearchIndex.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\ContentTrees\Republish.cs" />
+    <Compile Include="Shell\Commands\MenuCommands\SharedCommand.cs" />
+    <Compile Include="Shell\Commands\NewConnection.cs" />
+    <Compile Include="Shell\Commands\OpenSitecoreExplorer.cs" />
+    <Compile Include="Shell\Commands\OpenStartPage.cs" />
+    <Compile Include="Shell\Commands\TurnFeaturesOnOrOff.cs" />
+    <Compile Include="Shell\Commands\VisitWebsite.cs" />
+    <Compile Include="Shell\Dialogs\NewItemWizardDialog.xaml.cs">
+      <DependentUpon>NewItemWizardDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\Environment\VisualStudioBrowserHost.cs" />
+    <Compile Include="Shell\Environment\VisualStudioFilesHost.cs" />
+    <Compile Include="Shell\Environment\VisualStudioOutputHost.cs" />
+    <Compile Include="Shell\Environment\VisualStudioProjectHost.cs" />
+    <Compile Include="Shell\Environment\VisualStudioSettingsHost.cs" />
+    <Compile Include="Shell\Environment\VisualStudioShellHost.cs" />
+    <Compile Include="Shell\Environment\VisualStudioStatusbarHost.cs" />
+    <Compile Include="Shell\Environment\VisualStudioTasksHost.cs" />
+    <Compile Include="Shell\Environment\VisualStudioWindowsHost.cs" />
+    <Compile Include="Shell\GuidList.cs" />
+    <Compile Include="Shell\IServicePane.cs" />
+    <Compile Include="Shell\IVsUIShell5.cs" />
+    <Compile Include="Shell\Panes\CommandTargetArguments.cs" />
+    <Compile Include="Shell\Panes\EditorDocumentName.cs" />
+    <Compile Include="Shell\Panes\EditorFactory.cs" />
+    <Compile Include="Shell\Panes\EditorPane.cs" />
+    <Compile Include="Shell\Panes\SimpleEditorFactory.cs" />
+    <Compile Include="Shell\Panes\SimpleEditorPane.cs" />
+    <Compile Include="Shell\Panes\VsUIShell.cs" />
+    <Compile Include="Shell\Pipelines\Initialization\005 - SetTheme.cs" />
+    <Compile Include="Shell\Pipelines\Initialization\007 - RegisterShellMenuCommands.cs" />
+    <Compile Include="Shell\Pipelines\Initialization\010 - RegisterEditors.cs" />
+    <Compile Include="Shell\Pipelines\Initialization\015 - InitializeFileItemHandler.cs" />
+    <Compile Include="Shell\Pipelines\Initialization\020 - RegisterEvents.cs" />
+    <Compile Include="Shell\Pipelines\Initialization\030 - LoadSolution.cs" />
+    <Compile Include="Shell\Pipelines\Initialization\040 - InitializeTemplateWizard.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\0100 - CreateMvcModelHandler.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\0101 - CreateMvcControllerHandler.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\0102 - CreateMvcLayoutHandler.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\1000 - FileItemHandler.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\2000 - CreateItems.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\3000 - Packages.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\NewItemAndFieldsProcessorBase.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\NewItemProcessorBase.cs" />
+    <Compile Include="Shell\Pipelines\NewItemWizard\NewItemWizardPipeline.cs" />
+    <Compile Include="Shell\Pipelines\SetResources\VisualStudioTheme.cs" />
+    <Compile Include="Shell\Pipelines\Uninitialization\010 - UnregisterShellCommands.cs" />
+    <Compile Include="Shell\ProjectOptions\ProjectOptionsViewer.xaml.cs">
+      <DependentUpon>ProjectOptionsViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\ProjectOptions\PropertyPages\ConnectionPropertyPage.xaml.cs">
+      <DependentUpon>ConnectionPropertyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shell\Searching\SearchPane.cs" />
+    <Compile Include="Shell\ShellNotifications.cs" />
+    <Compile Include="Shell\VisualStudioWindowFactory.cs" />
+    <Compile Include="Shell\VsRunningDocumentTable.cs" />
+    <Compile Include="Shell\VsShell.cs" />
+    <Compile Include="Shell\VsTrackProjectDocuments.cs" />
+    <Compile Include="Shell\VsTrackSelection.cs" />
+    <Compile Include="Shell\Wizards\Wizard.cs" />
+    <Compile Include="SitecorePackage.cs" />
+    <Compile Include="UI\Archives\ArchivePane.cs" />
+    <Compile Include="UI\Archives\RecycleBinPane.cs" />
+    <Compile Include="UI\Dialogs\SelectItemDialogs\Panes\SearchPanes\SearchPane.xaml.cs">
+      <DependentUpon>SearchPane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EditorWindowHosts\EditorWindowFactory.cs" />
+    <Compile Include="UI\EditorWindowHosts\EditorwindowPane.cs" />
+    <Compile Include="UI\FolderSynchronization\Commands\StartFolderSync.cs" />
+    <Compile Include="UI\FolderSynchronization\Commands\StopFolderSync.cs" />
+    <Compile Include="UI\FolderSynchronization\Commands\SyncNow.cs" />
+    <Compile Include="UI\FolderSynchronization\Dialogs\EditFolderSynchronizerDialog.xaml.cs">
+      <DependentUpon>EditFolderSynchronizerDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FolderSynchronization\FolderSynchronizationManager.cs" />
+    <Compile Include="UI\FolderSynchronization\FolderSynchronizationPropertyPage.xaml.cs">
+      <DependentUpon>FolderSynchronizationPropertyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FolderSynchronization\FolderSynchronizer.cs" />
+    <Compile Include="UI\JobViewer\JobViewerPane.cs" />
+    <Compile Include="UI\LayoutDesigners\Commands\EditFileInVisualStudio.cs" />
+    <Compile Include="UI\LayoutsDesigners\Designers\SearchDataSourceDesigners\SearchDataSourceDesigner.cs" />
+    <Compile Include="UI\LayoutsDesigners\Designers\SearchDataSourceDesigners\SearchDataSourceDesignerControl.xaml.cs">
+      <DependentUpon>SearchDataSourceDesignerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Links\LinkPane.cs" />
+    <Compile Include="UI\LogViewer\LogViewerPane.cs" />
+    <Compile Include="UI\Management\CommandViewers\Commands\SearchForUsages.cs" />
+    <Compile Include="UI\Management\ManagementViewerPane.cs" />
+    <Compile Include="UI\Packages\PackageBuilders\PackageBuilderFactory.cs" />
+    <Compile Include="UI\Packages\PackageBuilders\PackageBuilderPane.cs" />
+    <Compile Include="UI\PublishingQueue\PublishingQueuePane.cs" />
+    <Compile Include="UI\QueryAnalyzer\QueryAnalyzerToolPane.cs" />
+    <Compile Include="UI\SearchAndReplace\SearchAndReplacePane.cs" />
+    <Compile Include="UI\StartPage\StartPagePane.cs" />
+    <Compile Include="UI\StartPage\Tabs\GetStarted\SitecoreRocks\Extending\CreatePluginVisualStudioProject.cs" />
+    <Compile Include="UI\StartPage\Tabs\GetStarted\SitecoreRocks\Extending\CreateServerPluginVisualStudioProject.cs" />
+    <Compile Include="UI\StartPage\Tabs\GetStarted\SitecoreRocks\Plugins\CreateProject.cs" />
+    <Compile Include="UI\TemplateDesigner\TemplateDesignerFactory.cs" />
+    <Compile Include="UI\TemplateDesigner\TemplateDesignerPane.cs" />
+    <Compile Include="UI\TemplateFieldSorter\TemplateFieldSorterFactory.cs" />
+    <Compile Include="UI\TemplateFieldSorter\TemplateFieldSorterPane.cs" />
+    <Compile Include="UI\TemplateHierarchies\TemplateHierarchyPane.cs" />
+    <Compile Include="UI\ToolWindowPaneHosts\IToolWindowPane.cs" />
+    <Compile Include="UI\ToolWindowPaneHosts\ToolWindowPaneHost.cs" />
+    <Compile Include="UI\ValidationIssues\ValidationIssuesPane.cs" />
+    <Compile Include="UI\XpathBuilder\XpathBuilderToolPane.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Key.snk" />
+    <None Include="Properties\DataSources\System.Xml.XmlElement.datasource" />
+    <Content Include="Sitecore Rocks License Agreement %28Final 092812%29.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EnvDTE80">
+      <Version>17.0.31902.203</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.31902.203" ExcludeAssets="runtime">
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.0.5232">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="ResharperCodeContractNullability">
+      <Version>2.0.2</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="WPFThemes.DarkBlend">
+      <Version>1.0.8</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CommandLineSwitches.pkgdef">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icon.png" />
+    <Content Include="Preview.png" />
+    <Content Include="Resources\16x16\database_publish.png" />
+    <Content Include="Resources\16x16\delete.png" />
+    <Content Include="Resources\16x16\duplicate.png" />
+    <Content Include="Resources\16x16\items_publish.png" />
+    <Content Include="Resources\16x16\items_serialize.png" />
+    <Content Include="Resources\16x16\item_new.png" />
+    <Content Include="Resources\16x16\item_publish.png" />
+    <Content Include="Resources\16x16\item_rename.png" />
+    <Content Include="Resources\16x16\item_serialize.png" />
+    <Content Include="Resources\16x16\jobviewer.png" />
+    <Content Include="Resources\16x16\layout_design.png" />
+    <Content Include="Resources\16x16\logviewer.png" />
+    <Content Include="Resources\16x16\mediamanager.png" />
+    <Content Include="Resources\16x16\newfolder.png" />
+    <Content Include="Resources\16x16\new_document.png" />
+    <Content Include="Resources\16x16\queryanalyzer.png" />
+    <Content Include="Resources\16x16\rawvalues.png" />
+    <Content Include="Resources\16x16\refresh.png" />
+    <Content Include="Resources\16x16\search.png" />
+    <Content Include="Resources\16x16\server_add.png" />
+    <Content Include="Resources\16x16\standardfields.png" />
+    <Content Include="Resources\16x16\standardvalues_navigate.png" />
+    <Content Include="Resources\16x16\synchronize.png" />
+    <Content Include="Resources\16x16\template.png" />
+    <Content Include="Resources\16x16\template_change.png" />
+    <Content Include="Resources\16x16\template_design.png" />
+    <Content Include="Resources\16x16\template_navigate.png" />
+    <Content Include="Resources\16x16\xpathbuilder.png" />
+    <Content Include="Resources\code.png" />
+    <Content Include="Resources\Images_24bit.bmp" />
+    <Content Include="Resources\Images_32bit.bmp" />
+    <Content Include="Resources\Package.ico" />
+    <Content Include="Sitecore.Rocks.vsct" />
+    <VSCTCompile Include="Sitecore.VisualStudio.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
+      <SubType>Designer</SubType>
+    </VSCTCompile>
+    <Content Include="SitecoreRocks.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Themes\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Shell\Dialogs\NewItemWizardDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Shell\ProjectOptions\ProjectOptionsViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Shell\ProjectOptions\PropertyPages\ConnectionPropertyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Dialogs\SelectItemDialogs\Panes\SearchPanes\SearchPane.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\FolderSynchronization\Dialogs\EditFolderSynchronizerDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\FolderSynchronization\FolderSynchronizationPropertyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\LayoutsDesigners\Designers\SearchDataSourceDesigners\SearchDataSourceDesignerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VSPackage.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <ManifestResourceName>VSPackage</ManifestResourceName>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="..\Sitecore.Rocks.Shared.VisualStudio\Sitecore.Rocks.Shared.VisualStudio.projitems" Label="Shared" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

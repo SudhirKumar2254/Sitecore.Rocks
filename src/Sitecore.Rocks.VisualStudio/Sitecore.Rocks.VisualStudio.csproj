@@ -106,10 +106,6 @@
       <HintPath>..\..\packages\Microsoft.VisualStudio.CommandBars.8.0.0.1\lib\net10\Microsoft.VisualStudio.CommandBars.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -148,25 +144,6 @@
     <Compile Include="..\SharedAssemblyVersion.cs">
       <Link>Properties\SharedAssemblyVersion.cs</Link>
     </Compile>
-    <Compile Include="ContentEditors\Commands\Fields\BrowseTypeName.cs" />
-    <Compile Include="Controls\Dialogs\BrowseTypeName\BrowseTypeNameDialog.xaml.cs">
-      <DependentUpon>BrowseTypeNameDialog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\Dialogs\BrowseTypeName\TypeNameSelector.xaml.cs">
-      <DependentUpon>TypeNameSelector.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Options\KeyboardSchemeOptions.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Projects\Commands\Registering\RegisterController.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterFileBase.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterLayout.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterModel.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterSublayout.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterViewLayout.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterViewRendering.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterXslRendering.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterXsltRendering.cs" />
     <Compile Include="Resources\Themes\LeftMarginMultiplierConverter.cs" />
     <Compile Include="Resources\Themes\TreeViewItemExtensions.cs" />
     <Compile Include="UI\Archives\ArchivePane.cs" />
@@ -200,24 +177,6 @@
       <DependentUpon>ConnectionPropertyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Shell\VisualStudioWindowFactory.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\FieldTypes\StandardFieldTypes.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\FieldTypes\FieldTypeHandlerManager.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\FieldTypes\FieldTypeHandlerAttribute.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\FieldTypes\IFieldTypeHandler.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\FileCodeModel.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\7000 - GenerateCode.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\ProcessCodeFirstTemplatesPipeline.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\8000 - SaveTemplates.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\2000 - ProcessInterfaces.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\Templates\Template.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\Templates\TemplateField.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\Templates\TemplateSection.cs" />
-    <Compile Include="CodeGeneration\CustomTools\AspxGeneratorCustomTool.cs" />
-    <Compile Include="CodeGeneration\CustomTools\CompiledCodeGeneratorCustomTool.cs" />
-    <Compile Include="CodeGeneration\CodeFirstTemplates\FileCodeModelCustomTool.cs" />
-    <Compile Include="CodeGeneration\CustomTools\XsltGeneratorCustomTool.cs" />
-    <Compile Include="ContentTrees\Commands\WebAdministration\AttachToProcess.cs" />
-    <Compile Include="Projects\AddToProject\AddToVisualStudioProject.cs" />
     <Compile Include="Shell\Commands\Marketplace.cs" />
     <Compile Include="Shell\Environment\VisualStudioFilesHost.cs" />
     <Compile Include="Shell\Environment\VisualStudioSettingsHost.cs" />
@@ -231,7 +190,6 @@
     <Compile Include="Shell\Environment\VisualStudioStatusbarHost.cs" />
     <Compile Include="Shell\VsRunningDocumentTable.cs" />
     <Compile Include="UI\FolderSynchronization\FolderSynchronizationManager.cs" />
-    <Compile Include="Net\Pipelines\Troubleshooter\DevelopmentServer.cs" />
     <Compile Include="UI\JobViewer\JobViewerPane.cs" />
     <Compile Include="UI\LayoutDesigners\Commands\EditFileInVisualStudio.cs" />
     <Compile Include="UI\LayoutsDesigners\Designers\SearchDataSourceDesigners\SearchDataSourceDesigner.cs" />
@@ -239,39 +197,12 @@
       <DependentUpon>SearchDataSourceDesignerControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\StartPage\StartPagePane.cs" />
-    <Compile Include="Projects\FileItems\FileItemDropManager.cs" />
-    <Compile Include="Projects\FileItems\Handlers\CshtmlFileItemHandler.cs" />
-    <Compile Include="Projects\FileItems\IFileItemHandler.cs" />
-    <Compile Include="Extensions\ProjectHostExtensions\ProjectHostExtensions.cs" />
     <Compile Include="Shell\Pipelines\NewItemWizard\3000 - Packages.cs" />
-    <Compile Include="CodeGeneration\T4\TextTemplating.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CodeGeneration\CodeFirstTemplates\Pipelines\ProcessCodeFirstTemplates\1000 - ProcessClasses.cs" />
     <Compile Include="UI\Packages\PackageBuilders\PackageBuilderPane.cs" />
-    <Compile Include="ContentEditors\ContentEditorFactory.cs" />
-    <Compile Include="ContentEditors\ContentEditorPane.cs" />
-    <Compile Include="ContentTrees\Commands\EditFile.cs" />
-    <Compile Include="ContentTrees\Commands\LocateFile.cs" />
-    <Compile Include="ContentTrees\Commands\OpenItemXml.cs" />
-    <Compile Include="ContentTrees\ContentTreePane.cs" />
-    <Compile Include="ContentTrees\Pipelines\DeleteItem\020 - DeleteFile.cs" />
-    <Compile Include="ContentTrees\Pipelines\DragCopy\030 - CopyFiles.cs" />
-    <Compile Include="ContentTrees\Pipelines\DuplicateItem\030 - DuplicateFile.cs" />
-    <Compile Include="Extensions\ProjectExtensions\ProjectExtensions.cs" />
-    <Compile Include="Extensions\ProjectItemExtensions\ProjectItemExtensions.cs" />
     <Content Include="CommandLineSwitches.pkgdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Compile Include="Media\MediaPane.cs" />
-    <Compile Include="Options\MacroOptions.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Projects\Commands\EditProjectFile.cs" />
-    <Compile Include="Projects\Commands\ProjectsSubmenu.cs" />
-    <Compile Include="Projects\Commands\RebindFileItems.cs" />
-    <Compile Include="Projects\Commands\SearchReferences.cs" />
     <Compile Include="Shell\Commands\OpenStartPage.cs" />
     <Compile Include="Shell\IServicePane.cs" />
     <Compile Include="Shell\Searching\SearchPane.cs" />
@@ -300,58 +231,6 @@
     <Compile Include="Shell\Panes\SimpleEditorFactory.cs" />
     <Compile Include="Shell\Panes\SimpleEditorPane.cs" />
     <Compile Include="Shell\Panes\VsUIShell.cs" />
-    <Compile Include="Projects\Commands\CheckOut.cs" />
-    <Compile Include="Projects\Commands\BindFileItem.cs" />
-    <Compile Include="Projects\Commands\Registering\RegisterFiles.cs" />
-    <Compile Include="Projects\Commands\DisconnectFileItem.cs" />
-    <Compile Include="Projects\Commands\EditItem.cs" />
-    <Compile Include="Projects\Commands\Exclude.cs" />
-    <Compile Include="Projects\Commands\LocateFileInContentTree.cs" />
-    <Compile Include="Projects\Commands\ResolveCommand.cs" />
-    <Compile Include="Projects\Commands\ResolveUsingLocal.cs" />
-    <Compile Include="Projects\Commands\ResolveUsingServer.cs" />
-    <Compile Include="Projects\Commands\Revert.cs" />
-    <Compile Include="Projects\Dialogs\AddWindow.xaml.cs">
-      <DependentUpon>AddWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\Commands\AddProject.cs" />
-    <Compile Include="Projects\Commands\Commit.cs" />
-    <Compile Include="Projects\Commands\EditProject.cs" />
-    <Compile Include="Projects\Commands\RemoveProject.cs" />
-    <Compile Include="Projects\Commands\SolutionCommand.cs" />
-    <Compile Include="Projects\Commands\Update.cs" />
-    <Compile Include="Projects\Dialogs\CheckOutDialog.xaml.cs">
-      <DependentUpon>CheckOutDialog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\Dialogs\CommitWindow.xaml.cs">
-      <DependentUpon>CommitWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\Dialogs\BindFileItemDialog.xaml.cs">
-      <DependentUpon>BindFileItemDialog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\Dialogs\CreateItemWindow.xaml.cs">
-      <DependentUpon>CreateItemWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\Dialogs\ExcludeWindow.xaml.cs">
-      <DependentUpon>ExcludeWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\Dialogs\RevertWindow.xaml.cs">
-      <DependentUpon>RevertWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\ElementIterator.cs" />
-    <Compile Include="Projects\FileItems\FileItemHandler.cs" />
-    <Compile Include="Projects\FileItems\FileItemManager.cs" />
-    <Compile Include="Projects\FileItems\Handlers\LayoutFileItemHandler.cs" />
-    <Compile Include="Projects\FileItems\PathBasedFileItemHandler.cs" />
-    <Compile Include="Projects\FileItems\FileItemHandlerAttribute.cs" />
-    <Compile Include="Projects\FileItems\Handlers\SublayoutFileItemHandler.cs" />
-    <Compile Include="Projects\FileItems\Handlers\XsltFileItemHandler.cs" />
-    <Compile Include="Projects\Project.cs" />
-    <Compile Include="Projects\ProjectFileItem.cs" />
-    <Compile Include="Projects\Dialogs\ProjectLogWindow.xaml.cs">
-      <DependentUpon>ProjectLogWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Projects\ProjectManager.cs" />
     <Compile Include="Shell\Commands\MenuCommands\ContentEditors\ContentEditorCommand.cs" />
     <Compile Include="Shell\Commands\MenuCommands\ContentTrees\CollapseAll.cs" />
     <Compile Include="Shell\Commands\MenuCommands\ContentTrees\ContentTreeCommand.cs" />
@@ -364,35 +243,15 @@
     <Compile Include="Shell\Commands\MenuCommands\ContentTrees\RebuildSearchIndex.cs" />
     <Compile Include="Shell\Commands\MenuCommands\ContentTrees\Republish.cs" />
     <Compile Include="Shell\Commands\MenuCommands\SharedCommand.cs" />
-    <Compile Include="Projects\Commands\Add.cs" />
     <Compile Include="SitecorePackage.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Shell\Commands\OpenSitecoreExplorer.cs" />
     <Compile Include="Shell\VsShell.cs" />
     <Compile Include="Shell\Commands\NewConnection.cs" />
-    <Compile Include="Schemas\SchemaManager.cs" />
-    <Compile Include="Options\VisualStudioOptions.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Shell\GuidList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shell\Wizards\Wizard.cs" />
-    <Compile Include="CodeGeneration\CodeGeneratorCustomTool.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CodeGeneration\CodeGenerationFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CodeGeneration\CodeGenerationPane.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CodeGeneration\CustomTool.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CodeGeneration\CustomToolRegistrationAttribute.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="UI\Management\CommandViewers\Commands\SearchForUsages.cs" />
     <Compile Include="UI\Packages\PackageBuilders\PackageBuilderFactory.cs" />
     <Compile Include="UI\StartPage\Tabs\GetStarted\SitecoreRocks\Extending\CreatePluginVisualStudioProject.cs" />
@@ -458,224 +317,8 @@
     <Resource Include="Resources\16x16\new_document.png" />
     <Resource Include="Resources\16x16\server_add.png" />
     <Resource Include="Resources\16x16\newfolder.png" />
-    <Content Include="ItemTemplates\Sitecore Rocks\ContentEditorCommand.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\ContentEditorFieldCommand.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\ContentTreeCommand.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\FieldType.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\Skin.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Layouts\Layout without Code Behind.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Layouts\Layout.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Renderings\xsl.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Renderings\Sublayout.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Pipelines\ContentEditorWarning.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Pipelines\HttpRequestProcessor.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Pipelines\LoaderProcessor.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Pipelines\PreprocessRequestProcessor.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Pipelines\RenderFieldProcessor.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Pipelines\RenderLayoutProcessor.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Pipelines\SaveProcessor.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Rules\RuleAction.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Rules\RuleCondition.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\UI\Command.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\UI\GutterRenderer.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\UI\SubitemsSortingComparer.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\UI\Validator.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Workflows\WorkflowAction.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Code Generation\LanguageConstantsAspx.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Code Generation\LanguageConstantsXslt.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Code Generation\LanguageConstantsCs.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Code Generation\StronglyTypedItems.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Engagement Analytics\Engagement Analytics Action.ZIP">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Engagement Analytics\Engagement Analytics Action with UI.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Code Generation\TemplateClasses.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Pipelines\PublishItem.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\ToolWindow.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\DocumentWindow.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\Management Tab.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Packages\Package.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\InfoPane.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\LoadItemPipeline.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\SaveItemPipeline.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\SetFieldVisibility.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\TreeViewItem.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore Rocks\VirtualItem.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\MVC\MvcViewRendering.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Speak\Component.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Speak\PageCode.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Speak\BaseComponent.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Speak\JQueryUIComponent.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Speak 1.2\Component.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\Speak 1.2\ComponentJavaScript.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\MVC\MvcModel.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\MVC\MvcControllerAction.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Sitecore\MVC\MvcViewLayout.zip">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ItemTemplates\Items.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="app.config" />
     <None Include="Key.snk" />
-    <Content Include="ProjectTemplates\Sitecore Rocks\Sitecore.Rocks.Plugin.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="ProjectTemplates\Sitecore Rocks\Sitecore.Rocks.Server.Plugin.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="Properties\DataSources\System.Xml.XmlElement.datasource" />
     <Content Include="Sitecore Rocks License Agreement %28Final 092812%29.rtf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -704,14 +347,6 @@
     <Content Include="Resources\Package.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Controls\Dialogs\BrowseTypeName\BrowseTypeNameDialog.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\Dialogs\BrowseTypeName\TypeNameSelector.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Shell\ProjectOptions\ProjectOptionsViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -753,102 +388,6 @@
       <SubType>Designer</SubType>
     </Resource>
     <Page Include="Shell\Dialogs\NewItemWizardDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Projects\Dialogs\AddWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Projects\Dialogs\CheckOutDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Projects\Dialogs\CommitWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Projects\Dialogs\BindFileItemDialog.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Projects\Dialogs\CreateItemWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Projects\Dialogs\ExcludeWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Projects\Dialogs\RevertWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Projects\Dialogs\ProjectLogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
@@ -955,6 +494,7 @@
       <Version>1.0.8</Version>
     </PackageReference>
   </ItemGroup>
+  <Import Project="..\Sitecore.Rocks.Shared.VisualStudio\Sitecore.Rocks.Shared.VisualStudio.projitems" Label="Shared" />
   <PropertyGroup>
     <UseCodebase>true</UseCodebase>
   </PropertyGroup>
